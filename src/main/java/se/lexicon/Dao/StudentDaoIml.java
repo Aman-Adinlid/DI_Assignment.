@@ -15,9 +15,14 @@ public class StudentDaoIml implements StudentDao {
 
     @Override
     public Student save(Student student) {
-        Student original = find(student.getId());
-        original.setName(student.getName());
-        original.setName(student.getName());
+
+        if (student.getId() == 0) {
+            student.setId(student.getId());
+            studentList.add(student);
+            Student original = find(student.getId());
+            original.setName(student.getName());
+            original.setName(student.getName());
+        }
 
         return student;
     }
