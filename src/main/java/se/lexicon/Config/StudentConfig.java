@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = "se.lexicon.*")
-public class AppConfig {
+public class StudentConfig {
 
 
 }
