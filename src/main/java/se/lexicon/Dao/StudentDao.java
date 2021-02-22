@@ -12,7 +12,7 @@ public interface StudentDao {
 
     List<Student> findAll();
 
-    void delete(int id);
+    boolean delete(int id);
 
 
 }

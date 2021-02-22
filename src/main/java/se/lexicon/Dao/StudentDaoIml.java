@@ -40,7 +40,7 @@ public class StudentDaoIml implements StudentDao {
     }
 
     @Override
-    public void delete(int id) {
-        studentList.removeIf(student -> student.getId() == id);
+    public boolean delete(int id) {
+        return studentList.removeIf(student -> student.getId() == id);
     }
 }
