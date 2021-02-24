@@ -3,6 +3,7 @@ package se.lexicon.Service;
 import se.lexicon.Model.Student;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface StudentManagement {
 
@@ -12,7 +13,7 @@ public interface StudentManagement {
 
     Student find(int id);
 
-    Student remove(int id);
+    boolean remove(int id);
 
     List<Student> findAll();
 
