@@ -1,16 +1,29 @@
 package se.lexicon.Util;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Scanner;
+
 @Component
-public class ScannerInputService implements UserInputService{
+public class ScannerInputService implements UserInputService {
+
+    private Scanner scanner;
+
+    @Autowired
+
+    public void setScanner(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
+
     @Override
     public String getString() {
-        return null;
+        return scanner.nextLine();
     }
 
     @Override
     public int getInt() {
-        return 0;
+        return scanner.nextInt();
     }
 }
