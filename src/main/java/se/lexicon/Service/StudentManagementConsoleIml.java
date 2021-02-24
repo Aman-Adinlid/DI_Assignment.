@@ -25,10 +25,10 @@ public class StudentManagementConsoleIml implements StudentManagement {
     @Override
     public Student create() {
         String name = userInputService.getString();
-        Student addStudent = new Student();
-        addStudent.setName(name);
+        Student student = new Student();
+        student.setName(name);
 
-        return save(addStudent);
+        return save(student);
     }
 
     @Override
