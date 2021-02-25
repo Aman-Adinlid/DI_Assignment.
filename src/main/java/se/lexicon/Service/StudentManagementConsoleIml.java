@@ -1,12 +1,13 @@
 package se.lexicon.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import se.lexicon.Dao.StudentDao;
 import se.lexicon.Model.Student;
 import se.lexicon.Util.UserInputService;
 
 import java.util.List;
-
+@Component
 public class StudentManagementConsoleIml implements StudentManagement {
 
     private UserInputService userInputService;
@@ -24,10 +25,12 @@ public class StudentManagementConsoleIml implements StudentManagement {
 
     @Override
     public Student create() {
-        String name = userInputService.getString();
-        Student student = new Student();
-        student.setName(name);
+        System.out.println("Type student name: ");
+        String newName = userInputService.getString();
 
+
+        Student student = new Student();
+        student.setName(newName);
         return save(student);
     }
 
@@ -43,10 +46,8 @@ public class StudentManagementConsoleIml implements StudentManagement {
 
     @Override
     public Student find(int id) {
-        if (id == 0) {
-            throw new IllegalArgumentException("Id is not be null");
-        }
-        return studentDao.find(userInputService.getInt());
+
+        return studentDao.find(id);
     }
 
     @Override
@@ -61,6 +62,16 @@ public class StudentManagementConsoleIml implements StudentManagement {
 
     @Override
     public Student edit(Student student) {
+        if (student == null) throw new IllegalArgumentException("Student is null");
+        Student st = find(student.getId());
+        if (st.getId() > 0) {
+            System.out.println("The student is" + student);
+            System.out.println("Type the new name of student: ");
+            String name = userInputService.getString();
+            Student edit = st;
+            edit.setName(name);
+            return edit;
+        }
         return null;
     }
 }
