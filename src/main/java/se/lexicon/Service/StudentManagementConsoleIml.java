@@ -27,8 +27,6 @@ public class StudentManagementConsoleIml implements StudentManagement {
     public Student create() {
         System.out.println("Type student name: ");
         String newName = userInputService.getString();
-
-
         Student student = new Student();
         student.setName(newName);
         return save(student);

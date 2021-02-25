@@ -27,8 +27,8 @@ public class App {
 
         //part2
         System.out.println("_____________________________");
-        //AnnotationConfigApplicationContext context1 = new AnnotationConfigApplicationContext(InputServiceConfig.class);
-        //UserInputService userInputService= context.getBean(UserInputService.class);
+        AnnotationConfigApplicationContext context1 = new AnnotationConfigApplicationContext(InputServiceConfig.class);
+        UserInputService userInputService= context.getBean(UserInputService.class);
 
         //part3
         System.out.println("_________________________________");
