@@ -1,4 +1,4 @@
-package se.lexicon.Dao;
+package se.lexicon.Dao.Sequencer;
 
 public class StudentSequencer {
 

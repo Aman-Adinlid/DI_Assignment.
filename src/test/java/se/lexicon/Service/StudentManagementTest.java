@@ -25,9 +25,7 @@ public class StudentManagementTest {
 
     @Test
     public void test_create(){
-        Student student= new Student("Aman");
-        String actual = student.getName();
-        Assert.assertEquals(student,actual);
+
     }
     @Test
     public void test_save(){
@@ -53,7 +51,6 @@ public class StudentManagementTest {
         List<Student> studentList = studentDao.findAll();
           studentList.add(new Student(1, "Aman"));
           studentList.add(new Student(2, "Adam"));
-        Assert.assertEquals();
     }
 
 @Test
