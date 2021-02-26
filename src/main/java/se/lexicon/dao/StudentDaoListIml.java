@@ -1,21 +1,19 @@
-package se.lexicon.Dao;
+package se.lexicon.dao;
 
 import org.springframework.stereotype.Component;
-import se.lexicon.Model.Student;
+import se.lexicon.model.Student;
 
 import java.util.ArrayList;
-
 import java.util.List;
 
 @Component("StudentDao")
+public class StudentDaoListIml implements StudentDao {
 
-public class StudentDaoIml implements StudentDao {
 
     private List<Student> studentList = new ArrayList<>();
 
     @Override
     public Student save(Student student) {
-
         if (student.getId() == 0) {
             student.setId(student.getId());
             studentList.add(student);
@@ -43,4 +41,5 @@ public class StudentDaoIml implements StudentDao {
     public boolean delete(int id) {
         return studentList.removeIf(student -> student.getId() == id);
     }
+
 }

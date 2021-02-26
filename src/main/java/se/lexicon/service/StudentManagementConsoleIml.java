@@ -1,10 +1,10 @@
-package se.lexicon.Service;
+package se.lexicon.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import se.lexicon.Dao.StudentDao;
-import se.lexicon.Model.Student;
-import se.lexicon.Util.UserInputService;
+import se.lexicon.dao.StudentDao;
+import se.lexicon.model.Student;
+import se.lexicon.util.UserInputService;
 
 import java.util.List;
 @Component
@@ -44,7 +44,6 @@ public class StudentManagementConsoleIml implements StudentManagement {
 
     @Override
     public Student find(int id) {
-
         return studentDao.find(id);
     }
 

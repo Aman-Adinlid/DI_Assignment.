@@ -1,6 +1,6 @@
-package se.lexicon.Dao;
+package se.lexicon.dao;
 
-import se.lexicon.Model.Student;
+import se.lexicon.model.Student;
 
 import java.util.List;
 
@@ -13,6 +13,4 @@ public interface StudentDao {
     List<Student> findAll();
 
     boolean delete(int id);
-
-
 }

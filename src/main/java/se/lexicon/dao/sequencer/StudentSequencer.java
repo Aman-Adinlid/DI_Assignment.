@@ -1,14 +1,14 @@
-package se.lexicon.Dao.Sequencer;
+package se.lexicon.dao.sequencer;
 
 public class StudentSequencer {
 
     private static int studentSequencer;
 
-    public static int nextStudentId(){
+    public static int nextStudentId() {
         return ++studentSequencer;
     }
 
-    public static int getStudentIdSequencer(){
+    public static int getStudentIdSequencer() {
         return studentSequencer;
     }
 }

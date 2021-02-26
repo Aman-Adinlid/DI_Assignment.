@@ -1,9 +1,8 @@
-package se.lexicon.Model;
+package se.lexicon.model;
 
 import java.util.Objects;
 
 public class Student {
-
     private int id;
     private String name;
 
@@ -55,4 +54,5 @@ public class Student {
                 ", name='" + name + '\'' +
                 '}';
     }
+
 }

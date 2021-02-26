@@ -6,11 +6,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import se.lexicon.Config.InputServiceConfig;
-import se.lexicon.Config.StudentConfig;
-import se.lexicon.Dao.StudentDao;
-import se.lexicon.Model.Student;
-import se.lexicon.Util.UserInputService;
+import se.lexicon.config.InputServiceConfig;
+import se.lexicon.dao.StudentDao;
+import se.lexicon.model.Student;
+import se.lexicon.util.UserInputService;
 
 import java.util.List;
 

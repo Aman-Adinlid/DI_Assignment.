@@ -1,9 +1,8 @@
-package se.lexicon.Service;
+package se.lexicon.service;
 
-import se.lexicon.Model.Student;
+import se.lexicon.model.Student;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface StudentManagement {
 

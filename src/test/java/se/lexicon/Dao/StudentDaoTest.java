@@ -6,13 +6,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import se.lexicon.Config.StudentConfig;
-import se.lexicon.Model.Student;
+import se.lexicon.config.InputServiceConfig;
+import se.lexicon.dao.StudentDao;
+import se.lexicon.model.Student;
 
 import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {StudentConfig.class})
+@ContextConfiguration(classes = {InputServiceConfig.class})
 public class StudentDaoTest {
 
     @Autowired
